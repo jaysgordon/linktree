@@ -53,7 +53,19 @@
         <span class="link-type">EMAIL</span>
       </a>
     </nav>
+    <div class="editor-entry"><button type="button" id="edit-links">Edit my links</button><span>Changes stay on this device</span></div>
     <footer><span class="footer-mark" aria-hidden="true">✳</span><p>Stay curious. Make good things.</p><span class="footer-note">Alex Morgan</span></footer>
   </main>
+<dialog id="link-editor" aria-labelledby="editor-title">
+    <form id="editor-form">
+      <header class="editor-heading"><div><p class="eyebrow">MAKE IT YOURS</p><h2 id="editor-title">Your links, your way.</h2></div><button type="button" id="close-editor" aria-label="Close editor">✕</button></header>
+      <p class="editor-help">Update your links below. Saved changes appear only in this browser. Download your page when you’re ready to publish it.</p>
+      <div id="editor-fields"></div>
+      <button type="button" id="add-link" class="secondary">+ Add a link</button>
+      <p id="editor-status" role="status" aria-live="polite"></p>
+      <div class="editor-actions"><button type="button" id="download-page" class="secondary">Download page</button><button type="submit" class="primary">Save changes</button></div>
+    </form>
+  </dialog>
+  <script src="editor.js" defer></script>
 </body>
 </html>

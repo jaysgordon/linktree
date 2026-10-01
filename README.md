@@ -1,6 +1,6 @@
 # Your link page
 
-A responsive, accessible Linktree-style page made with plain HTML and CSS. No backend, JavaScript, package installation, build step, external fonts, or tracking. All assets are local or embedded.
+A responsive, accessible Linktree-style page made with plain HTML and CSS. No backend, package installation, build step, external fonts, or tracking. A small optional browser script powers the link editor. All assets are local or embedded.
 
 ## Preview
 
@@ -45,3 +45,11 @@ Semantic landmarks, descriptive link labels, visible keyboard focus, touch-frien
 Deployment settings follow [Vercel’s build configuration documentation](https://vercel.com/docs/builds/configure-a-build) and [static configuration reference](https://vercel.com/docs/project-configuration/vercel-json).
 
 Verified in Chrome at 320, 390, 768, and 1440 pixel viewport widths, with no horizontal overflow; also checked keyboard focus, 200% text sizing, and absence of page errors. Replace the sample links before sharing publicly.
+
+## Browser-only editor (feature branch)
+
+Choose **Edit my links** to change link titles, destinations, descriptions, and button labels. Add, remove, and reorder up to 30 links. Save changes stores a draft in this browser’s local storage and updates the page on this device. Refreshing preserves the draft when browser storage is available. No accounts, backend, or shared writes are involved. Other visitors still see the published links; clearing browser data removes the local draft. Do not put sensitive information in link drafts.
+
+**Download page** exports the current valid form as an `index.html` with the edited links. Keep `styles.css` alongside the download. The exported page omits the editor and requires no JavaScript. Replace the repository’s page and push when you want to publish it. Saving in the editor never publishes automatically. If browser storage is blocked, use the download to preserve your edits.
+
+The editor accepts full HTTP(S), email (`mailto:`), and phone (`tel:`) destinations; executable URLs are rejected. Text is inserted as text, not interpreted as HTML. The original page still works when JavaScript is disabled, although editing requires JavaScript.
