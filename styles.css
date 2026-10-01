@@ -1,0 +1,80 @@
+/* CUSTOMIZE: change these colors to make the page your own. */
+:root {
+  color-scheme: dark;
+  --background: #111d32;
+  --surface: #19273e;
+  --surface-hover: #233550;
+  --text: #f6f7f9;
+  --muted: #b2bed1;
+  --accent: #d4f879;
+  --ink: #142223;
+  --border: #34425a;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at 50% 0%, #203450 0%, var(--background) 58%);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  min-width: 0;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+}
+.page { width: min(100% - 2.5rem, 32rem); margin: 0 auto; padding: 3.5rem 0 2rem; }
+.profile { text-align: center; margin-bottom: 2rem; }
+.avatar {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--ink);
+  font-size: 2rem;
+  font-weight: 750;
+  letter-spacing: -.12rem;
+  object-fit: cover;
+}
+.spark { position: absolute; right: -.5rem; bottom: -.15rem; color: var(--accent); background: var(--background); border: 4px solid var(--background); border-radius: 50%; font-size: 1.65rem; line-height: 1; letter-spacing: 0; }
+.eyebrow { font-size: .75rem; font-weight: 650; letter-spacing: .16em; color: var(--muted); margin: 0 0 .65rem; }
+h1 { font-size: clamp(2rem, 7vw, 2.8rem); line-height: 1.15; letter-spacing: -.05em; margin: 0; }
+.name-dot { color: var(--accent); }
+.handle { color: var(--muted); font-size: .875rem; margin: .5rem 0 1rem; }
+.bio { margin: 0; color: #d3dae5; }
+.links { display: grid; gap: .75rem; }
+a { color: inherit; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+.featured {
+  display: grid;
+  gap: 1rem;
+  padding: 1.4rem 1.5rem;
+  border-radius: 1.25rem;
+  color: var(--ink);
+  background: var(--accent);
+  transition: transform 180ms ease, background 180ms ease;
+}
+.featured-top { display: flex; justify-content: space-between; align-items: center; }
+.tag { font-size: .75rem; letter-spacing: .12em; font-weight: 750; }
+.feature-symbol { font-size: 2rem; line-height: 1; }
+h2 { font-size: 1.5rem; letter-spacing: -.035em; line-height: 1.2; margin: 0 0 .4rem; }
+.featured p { margin: 0; font-size: .875rem; }
+.feature-action { font-size: .875rem; font-weight: 700; text-decoration: underline; text-underline-offset: .3em; }
+.link-card { display: flex; align-items: center; gap: 1rem; padding: 1.1rem; border: 1px solid var(--border); border-radius: 1rem; background: var(--surface); transition: background 180ms ease, transform 180ms ease, border-color 180ms ease; }
+.link-icon { flex: 0 0 2.5rem; height: 2.5rem; display: grid; place-items: center; border-radius: .7rem; background: #24364e; color: #dce5f4; }
+.link-icon svg { width: 1.3rem; height: 1.3rem; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.link-copy { min-width: 0; flex: 1; }
+.link-copy strong { display: block; font-size: 1rem; font-weight: 650; }
+.link-copy > span { display: block; font-size: .875rem; color: var(--muted); margin-top: .2rem; }
+.link-type { font-size: .75rem; letter-spacing: .06em; color: var(--muted); }
+footer { text-align: center; padding-top: 2rem; color: var(--muted); }
+.footer-mark { color: var(--accent); font-size: 1.5rem; }
+footer p { font-size: .875rem; margin: .4rem 0; }
+.footer-note { font-size: .75rem; opacity: .85; }
+@media (hover: hover) { .link-card:hover { background: var(--surface-hover); border-color: #637899; transform: translateY(-2px); } .featured:hover { background: #e0ff98; transform: translateY(-2px); } }
+@media (max-width: 420px) { .page { width: calc(100% - 2rem); padding-top: 2.5rem; } .link-card { gap: .75rem; padding: 1rem; } .link-type { display: none; } .featured { padding: 1.25rem; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }
+@media (forced-colors: active) { .featured { border: 1px solid ButtonText; } .avatar { border: 1px solid CanvasText; } }
